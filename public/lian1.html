@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title></title>
+
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        #slider{
+            position:relative;
+            overflow:hidden;
+            height:500px;
+
+        }
+        #slider>img{
+            width:0;
+            float:left;
+            height:500px;
+            position: absolute;
+            left:0;
+            top:0;
+            opacity:0;
+            transition: all 3s linear;
+        }
+
+        #slider>img.show{
+            width:100%;
+            height:500px;
+            opacity:1;
+            z-index:10;
+            right:0;
+            top:0;
+
+        }
+        #slider>ul{
+            width:40px;
+            background:transparent;
+            position: absolute;
+            height:200px;
+            top:34%;
+            left:48px;
+            z-index:12;
+        }
+        #slider>ul>li{
+            border-radius:50%;
+            height:40px;
+            width:40px;
+            margin-bottom:10px;
+            background-color:rgba(0,0,0,0.4);
+            border:1px solid white;
+
+        }
+        #slider>ul>li.bgcolor{
+            background-color:orange;
+        }
+        #slider>a{
+            text-decoration: none;
+            height:50px;
+            width:50px;
+            border-radius: 50%;
+            background:transparent;
+            line-height: 50px;
+            display:block;
+            font-weight: 800;
+            cursor:pointer;
+        }
+       #slider>.pre{
+           position:absolute;
+           top:20px;
+           left:38px;
+           z-index:15;
+       }
+        #slider>.next{
+            position:absolute;
+            bottom:20px;
+            z-index:15;
+            left:38px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="slider" class=" w-100 text-center">
+       <img class="show" src="img/banner1.png" alt=""/>
+       <img  class="" src="img/banner2.png" alt=""/>
+       <img  class="" src="img/banner3.png" alt=""/>
+       <img  class="" src="img/banner4.png" alt=""/>
+    <ul class="list-unstyled">
+        <li class="bgcolor"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <a class="pre"><img src="img/left.png" alt=""/></a>
+    <a class="next"><img src="img/right.png" alt=""/></a>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+var imgs=$("#slider>img");
+var lis=$("#slider>ul>li")
+var i=0;
+function task(){
+    imgs.eq(i).addClass("show").siblings().removeClass("show");
+    lis.eq(i).addClass("bgcolor").siblings().removeClass("bgcolor");
+    console.log(i)
+    i++;
+    if(i==imgs.length)
+    i=0;
+}
+//页面加载时上下标签隐藏
+window.onload=function(){
+    $("#slider>a").hide();
+}
+//实现图片自动轮播
+var timer=setInterval(task,5000);
+//鼠标移入停止轮播
+slider.onmouseenter=function(){
+    clearInterval(timer);
+    $("#slider>a").show();
+}
+//鼠标移出开始轮播
+slider.onmouseleave=function(){
+    timer=setInterval(task,5000);
+    $("#slider>a").hide();
+}
+//点击小圆点跳转到小圆点所在的位置
+lis.on("click",function(){
+    i=$(this).index();
+    imgs.eq(i).addClass("show").siblings().removeClass("show");
+    lis.eq(i).addClass("bgcolor").siblings().removeClass("bgcolor");
+
+})
+//点击跳转到上一张图片
+$(" #slider>.pre").on("click",function(){
+   if(i==0){
+       i=imgs.length-1;
+       imgs.eq(i).addClass("show").siblings().removeClass("show");
+       lis.eq(i).addClass("bgcolor").siblings().removeClass("bgcolor");
+       console.log(i);
+   }else if(i<imgs.length&&i>0){
+       i--;
+       imgs.eq(i).addClass("show").siblings().removeClass("show");
+       lis.eq(i).addClass("bgcolor").siblings().removeClass("bgcolor");
+       console.log(i);
+   }
+})
+//点击跳转到下一张图片
+$(" #slider>.next").on("click",function(){
+   if(i==imgs.length-1){
+       i=0;
+       imgs.eq(i).addClass("show").siblings().removeClass("show");
+       lis.eq(i).addClass("bgcolor").siblings().removeClass("bgcolor");
+       console.log(i);
+   }else if(i<imgs.length&&i>=0){
+       i++;
+       imgs.eq(i).addClass("show").siblings().removeClass("show");
+       lis.eq(i).addClass("bgcolor").siblings().removeClass("bgcolor");
+       console.log(i);
+   }
+})
+
+
+//
+//function task(){
+//    var img=slider.getElementsByClassName("show")[0];
+//    console.log(img);
+//    img.className="";
+//    if(img.nextElementSibling){
+//    console.log(img.nextElementSibling);
+//        img.nextElementSibling.className="show";
+//}else
+//        img.parentNode.children[0].className="show";
+//}
+//var timer=setInterval(task,10000);
+//slider.onmouseover=function(){
+//    clearInterval(timer);
+//}
+//slider.onmouseout=function(){
+//    timer=setInterval(task,10000);
+//}
+
+</script>
+</body>
+</html>
+

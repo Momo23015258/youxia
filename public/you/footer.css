@@ -1,0 +1,72 @@
+.link {border-top: 1px solid #787878;line-height: 25px;margin-top: 117px;color: #151515;font-size: 13px;text-align: left;width: 1190px;padding-left: 10px}
+.link a {color: #151515;display: inline-block;padding: 0 15px 0 0}
+.footer {margin-top: 60px;padding:35px 0 0;text-align: center;border-top: 1px solid #d4d4d4;}
+.footer a {margin: 0 15px 0 0;white-space: nowrap;color: #666;}
+.foot-nav {line-height: 20px;color: #666;}
+.foot-copyright {line-height: 20px;padding: 2px 0;color: #666;}
+.footer b {margin: 0 4px;font-weight: normal;}
+.footer{ background:#fff}
+.footer .tra a{ margin:0}
+.footer .link {border-top: 1px solid #ddd;color: #666;font-size: 13px;line-height:25px;margin-top:16px;padding-left:0px;text-align: left; width:100%; padding-top:8px;}
+.tra{float:left; text-align:left}
+.Box1{ width:315px; float:left}
+.tra ul{ margin-left:42px}
+.tra .ul{ margin-left:42px; color:#666}
+.Box2{ width:255px; float:left}
+.Box3{ width:190px; float:left}
+.Box4{ float:left}
+.Box4 ul p{white-space: nowrap;}
+.footer .tit i.icon{background:url("common_foot.png")/*tpa=http://static.youxiake.com/zt/images/common/common_foot.png*/ no-repeat; width:36px; height:36px; display:inline-block; vertical-align:middle; margin-right:6px}
+.footer .Box1 .tit i.icon{ background-position:0 0}
+.footer .Box2 .tit i.icon{background-position:-40px 0}
+.footer .Box3 .tit i.icon{background-position:-80px 0}
+.footer .Box4 .tit i.icon{background-position:-120px 0}
+
+.tra .tit{ font-size:14px; font-weight:bold; font-family:"微软雅黑"; color:#666}
+.tra ul li{ float:left; line-height:26px; text-align:left; width:70px; overflow:hidden}
+.Box1 ul li{ width:150px;}
+.Box1 ul li.li{ width:120px}
+.ybox{ width:100%; height:80px; overflow:hidden; background:#e99605;color:#fff; margin-top:30px}
+.ybox ul li{ float:left; text-align:left}
+.footer .ybox ul li.li6{ padding:0;}
+.ybox ul li.li6 p{ border:none}
+.ybox ul li h3{ font-size:14px; font-weight:bold; margin-top:5px}
+.ybox ul li p{ line-height:22px; font-family:"宋体"; border-right:1px solid #f0ba79; padding-right:10px}
+.cyItem { margin-right:-30px}
+.cyItem li{ float:left; width:185px; border:1px solid #e5e5e5; text-align:left;}
+.cyItem li i{ background:url("common_foot2.png")/*tpa=http://static.youxiake.com/zt/images/common/common_foot2.png*/ no-repeat;display:block; vertical-align:middle;float:left}
+.cyItem li p{ float:left; margin-top:4px; color:#666}
+.footer .cyItem li a{ margin:0}
+
+.foot-ext {padding: 12px 0; text-align:center; width:1000px; margin:0 auto}
+.footer .foot-ext a {float:left;}
+.container Foot{ margin:10px 0}
+.foot-ext .footer-ext-s10 img{width:auto!important; height:43px!important;}
+.footer .foot-ext a{ margin:0 4px 0 1px}
+
+.foot1200 .tra{ margin-right:93px}
+.foot1200 .ybox ul li{ width:180px; padding-right:40px}
+.foot1200 .ybox ul li.li4,.foot1200 .ybox ul li.li5{ padding-right:50px; width:150px}
+.foot1200 .ybox ul li.li6{ width:140px; float:right}{ width:140px; float:right}
+.foot1200 .cyItem li{ width:190px;padding:10px 15px 10px 20px; margin:17px 16px 10px 0}
+.foot1200 .cyItem li p{ margin-left:20px; line-height:24px}
+.foot1200 .cyItem li i.icon1{ background-position:0 -47px; width:53px; height:52px;}
+.foot1200 .cyItem li i.icon2{ background-position:-59px -47px; width:59px; height:52px;}
+.foot1200 .cyItem li i.icon3{ background-position:-123px -47px; width:53px; height:52px;}
+.foot1200 .cyItem li i.icon4{ background-position:-183px -47px; width:53px; height:52px;}
+.foot1200 .cyItem li i.icon5{ background-position:-241px -47px; width:53px; height:52px;}
+.foot1200 .tra.Box4 {margin-right:10px}
+
+.foot1000 .tra.Box4 {margin-right:0px}
+.foot1000 .tra{ margin-right:29px}
+.foot1000 .ybox ul li{ width:160px;padding-right:20px}
+.foot1000 .ybox ul li.li4{ padding-right:20px; width:140px}
+.foot1000 .ybox ul li.li5{ padding-right:20px; width:140px}
+.foot1000 .ybox ul li.li6{ width:130px; float:right}
+.foot1000 .cyItem li{ width:166px;padding:10px 12px; margin:17px 10px 10px 0}
+.foot1000 .cyItem li p{ margin-left:10px;}
+.foot1000 .cyItem li i.icon1{ background-position:0 0; width:45px; height:44px;}
+.foot1000 .cyItem li i.icon2{ background-position:-52px 0; width:50px; height:44px;}
+.foot1000 .cyItem li i.icon3{ background-position:-107px 0; width:45px; height:44px;}
+.foot1000 .cyItem li i.icon4{ background-position:-158px 0; width:45px; height:44px;}
+.foot1000 .cyItem li i.icon5{ background-position:-213px 0; width:45px; height:44px;}

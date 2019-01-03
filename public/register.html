@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/register.css"/>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/register.js"></script>
+    <title></title>
+</head>
+<body>
+<header class="header1 w-100 bg-dark p-2">
+    <a href="" class="w-100"><img src="img/header.png"></a>
+</header>
+<section class="g-body w-100">
+    <div class="g-layout">
+        <div class="regFormStep1 p-4">
+            <div class="form-title ">
+                <p class="mr-2 ">注册游侠客账号</p><img src="img/body.png" alt=" "/>
+            </div>
+            <input class="w-100 p-2 " type="text" name="uname"placeholder="请输入用户名"/>
+            <span><b>*</b>10个字符以内的字母、数字或下划线的组合</span>
+            <input class="w-100 p-2  mb-3" type="password" name="pwd" placeholder="请输入6位数字密码"/>
+            <input class="w-100 p-2 mb-3" type="password" name="cpwd" placeholder="请再次输入密码"/>
+            <input class="w-100 p-2 mb-3" type="text" name="phone" placeholder="请输入手机号"/>
+            <input class="w-100 p-2 mb-3" type="email" name="email" placeholder="请输入您的邮箱"/>
+            <input type="radio" name="gender" id="1"/><label for="1">男</label>
+            <input type="radio" name="gender" id="0"/><label for="0">女</label>
+            <input type="radio" name="gender" id="2" checked/><label for="2">不详</label>
+            <input class="w-100 btn-warning p-2" type="button" value="注册" onclick="register()" />
+        </div>
+    </div>
+</section>
+<div class="row pt-3 ">
+    <div class="col-3 offset-1">
+        <p ><h2>爱旅游</h2></p>
+        <p><h4>爱摄影</h4></p>
+        <p><h2>你就是游侠客</h2></p>
+    </div>
+    <div class="col-3 ">
+        <ul class="list-unstyled ">
+            <li><h2>你知道吗</h2></li>
+            <li>游侠客是旅行者的社交网络</li>
+            <li>游侠客的线路都是精心策划的</li>
+            <li>加入游侠客多参加户外运动</li>
+            <li>你可能会增加5年寿命,多交18个旅伴</li>
+        </ul>
+    </div>
+    <div class="col-4 ">
+        <ul class="list-unstyled ">
+            <li><h2>加入游侠客</h2></li>
+            <li>结识各种旅游狂人、户外大侠、摄影专家、自驾高手</li>
+            <li>与朋友、同学、同事、家人保持密切的联络</li>
+            <li>结伴出游，参加各种精彩的活动</li>
+            <li>分享精彩的旅途生活、照片、游记</li>
+        </ul>
+    </div>
+</div>
+<footer class="footer1 pt-4">
+        <p class="mt-2">ICP经营许可证：<a href="">浙ICP备09011512-1号</a><b>|</b>
+        <a href="">营业执照</a><b>|</b>&nbsp;&nbsp;&nbsp;浙江游侠客国际旅行社有限公司&nbsp;&nbsp;&nbsp;杭州途游电子商务有限公司</p>
+        <p class="pt-1" ><span>© 2018 youxiake.com 版权所有</span><span>法律顾问：浙江四海方圆律师事务所&nbsp;&nbsp;&nbsp;傅林放</span></p>
+    <img src="img/iccc.jpg" alt=""/>
+</footer>
+</body>
+</html>

@@ -1,0 +1,714 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.wap>div.floor{
+    background-attachment: fixed;
+    background-size: cover;
+    height: 997px;
+}
+#bk01{
+    background-image:url(../you/bk01.jpg);
+}
+#bk02{
+    background-image:url(../you/bk02.jpg);
+}
+#bk03{
+    background-image:url(../you/bk03.jpg);
+}
+#bk04{
+    background-image:url(../you/bk04.jpg);
+}
+#bk05{
+    background-image:url(../you/bk05.jpg);
+}
+#bk01 .title{
+    background-image:url(../you/tit01.png);
+}
+#bk02 .title{
+    background-image:url(../you/tit02.png);
+}
+#bk03 .title{
+    background-image:url(../you/tit03.png);
+}
+#bk04 .title{
+    background-image:url(../you/tit031.png);
+}
+#bk05 .title{
+    background-image:url(../you/tit04.png);
+}
+header{
+    height:48px;
+    background-color: white;
+   position: relative;
+}
+header>ul{
+    position: absolute;
+    list-style: none;
+    height:48px;
+    top:0;
+    left:0;
+    margin-bottom: 0;
+    text-align: center;
+}
+header>ul{
+     float: left;
+     margin-left:300px;
+}
+header>ul>li{
+    float: left;
+    margin-top: 10px;
+    margin-right:15px;
+}
+header>ul>li>a{
+    font-size:15px;
+    color:#666;
+}
+header>ul>li>a:hover,header>p>a:hover{
+    color:red;
+}
+header>p{
+    float: right;
+    margin-top:12px;
+    margin-right:200px;
+}
+header>p>a{
+    font-size:15px;
+    color:#666;
+}
+header>img{
+	position: absolute;
+	left: 205px;
+    top: 8px;
+}
+.floor:before{
+	content:"";
+	display: table;
+}
+.floor>.title{
+	width: 433px;
+	height: 74px;
+	margin: 35px auto 20px;
+	background-repeat: no-repeat
+}
+.floor>.heng {
+    width: 1200px;
+	margin: 0 auto;
+	height: 387px;
+	position: relative;;
+}
+.floor>.heng>div.item{
+	float: right;
+	width: 513px;
+    height: 387px;
+    background: #fff;
+}
+.floor>.heng>span.f-tag{
+		background: #c40939;
+		color: #fff;
+		display: block;
+		font-size: 16px;
+		height: 36px;
+		left: 15px;
+		line-height: 36px;
+		padding: 0 10px;
+		position: absolute;
+		text-align: center;
+		top: 15px;
+}
+.item>div:nth-child(1)>h5>b{
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 30px;
+
+}
+.item>div{
+    margin:10px 25px;
+}
+.item>div:nth-child(1) .f-tit{
+    color: #f00;
+    display: block;
+    margin-top: 5px;
+    font-weight: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    word-wrap: normal;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+.item>p{
+    margin:10px 25px; 
+    font-size: 14px;
+    color:black;
+    font-family: Tahoma, Helvetica,
+    Tahoma, Helvetica, Arial, sans-serif, 微软雅黑;
+}
+.item>p.price{
+    margin:0 25px;
+    font-size: 14px;
+}
+.item>p.price span{
+    color:orange;
+    margin-left: 20px;
+}
+.item>p.price span b{
+    font-size: 30px;
+}
+.heng .f-btn {
+    background: #ff7d00;
+    color: #fff;
+    display: block;
+    font-family: Tahoma, Helvetica,
+    Tahoma, Helvetica, Arial, sans-serif, 微软雅黑;
+    font-size: 18px;
+    height: 34px;
+    line-height: 34px;
+    margin-top: 30px;
+    text-align: center;
+    text-decoration: none;
+    width: 133px;
+    margin-left:25px;
+
+}
+.shu{
+    height: 365px;
+    width: 1200px;
+    margin: 20px auto;
+}
+.shu>ul>li{
+    float:left;
+    width: 386px;
+    height: 365px;
+    position: relative;
+   
+}
+.shu>ul>li:not(:last-child){
+    margin-right: 21px;
+}
+
+
+.shu .f-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 0 10px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    color: #fff;
+    background: #c40939;
+    z-index: 99;}
+
+    .shu .f-link {
+        position: relative;
+        display: block;
+        cursor: pointer;
+        overflow: hidden;
+        text-decoration: none;
+        background: #fff;
+        color: #999;
+        height: 365px;
+    }
+    .fn-an {
+        transition: all 0.2s ease 0s;
+    }
+    .shu .f-wap {
+        width: 386px;
+        height: 216px;
+        transition: all 0.4s linear;
+    }
+    .shu .f-wap:hover {
+        background-color: rgba(0,0,0,0.7);
+    }
+    .shu .f-wap:hover img{
+        z-index: -10;
+        opacity:0.4;
+    }
+    .shu .f-wap:hover .application{
+        opacity: 1;
+    }
+    .shu .f-wap:hover .plchbox{
+        opacity: 1;
+        top:110px;
+    }
+    .shu .f-link .application {
+    color: #fff;
+    font-size: 20px;
+    height: 47px;
+    line-height: 47px;
+    margin: 0 auto;
+    width: 160px;
+    border: 2px solid #fff;
+    position: absolute;
+    z-index: 99;
+    text-align: center;
+    top: 70px;
+    transition: all ease 0.45s;
+    opacity: 0;
+    left: 110px;}
+.shu .f-link .plchbox {
+        font-size: 0;
+        padding-top: 18px;
+        text-align: center;
+        position: absolute;
+        z-index: 99;
+        top: 155px;
+        width: 386px;
+        text-align: center;
+        opacity: 0;
+        transition: all ease 0.45s;
+}
+.shu .f-link .plchbox .browse {
+    background: url(../you/plicon.png) no-repeat 0 3px;
+    padding: 0 20px;
+}
+.shu .f-link .plchbox span {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+}
+.shu .f-link .plchbox .tour {
+    background: url(../you/plicon.png) no-repeat 0 -26px;
+    padding: 0 0 0 19px;
+}
+
+
+.shu .f-link .plchbox span {
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;}
+
+.shu .f-link h4 {
+    margin: 5px 5px 2px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    height: 50px;
+    overflow: hidden;}
+
+.shu .f-time {
+    margin: 10px 5px 0;
+    color: #999;
+    height: 35px;}
+
+.shu .f-info {
+    height: 45px;
+    overflow: hidden;
+}
+
+.shu .f-money {
+    float: left;
+    color: #ff7d00;
+    margin-left: 5px;
+    line-height: 45px;
+    font-size: 12px;
+}
+
+.shu .f-prompt {
+    float: right;
+    margin-top: 20px;
+    margin-right: 8px;
+    font-size: 12px;
+}
+
+.shu .f-money em {
+    font-family: Constantia, Georgia;
+    font-size: 30px;
+    margin: 0 2px;
+}
+
+.shu .f-prompt em {
+    color: #ff7d00;
+    margin: 0 2px;
+}
+.shu .f-item .select {
+    position: absolute;
+    bottom: 55px;
+    left: 10px;
+    width: 370px;
+    height: 31px;
+}
+.time {
+    height: 29px;
+    position: relative;
+}
+
+.time dt {
+    height: 29px;
+    display: inline-block;
+    border: 1px solid #ddd;
+    background: #fff url(../you/ico-01.png) no-repeat 325px center;
+    line-height: 30px;
+    padding-left: 10px;
+    cursor: pointer;
+    width: 350px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    z-index: 99;
+    color: #666;
+    font-size:12px;
+}
+
+.time dd {
+    position: absolute;
+    left: 0;
+    top: 31px;
+    border: 1px solid #d2ccc4;
+    background: #fff;
+    display: none;
+    z-index: 5;
+    width: 350px;
+    z-index: 9999;
+    padding-bottom:5px;
+}
+.time dd.d1{
+    display:block;
+}
+
+.time dd ul {
+    width: 360px;
+}
+
+.time dd ul li {
+    height: 22px;
+    line-height: 22px;
+    padding: 5px 10px 5px;
+    cursor: pointer;
+    font-size:12px;
+}
+.f-money .small {
+    line-height: 57px;
+}
+.small {
+    font-size: 12px !important;
+}
+.travel {
+    height: 385px;
+    position: relative;
+    z-index: 999;
+    margin-top: -5px;
+}
+.auto-x {
+    width: 1200px;
+    margin: 0 auto;
+}
+.travel .title-big {
+    padding-top: 40px;
+}
+.title-big {
+    font-size: 24px;
+    font-family: 微软雅黑;
+    position: relative;
+    margin-bottom: 20px;
+    height: 37px;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    width: 1200px;
+    height: 64px;
+}
+.title-big li.active {
+    border-bottom: 2px solid #303030;
+}
+.title-big li {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    border-bottom: none;
+    top:31px;
+    padding-left:5px;
+    padding-right:15px;
+}
+.title-big li.active a {
+    color: #303030;
+}
+.travel-item {
+    position: relative;
+}
+.travel-item .more {
+    float: right;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0;
+    position: absolute;
+    right: 0px;
+    top: -57px;
+    color: #424a5a;
+}
+ul.attach {
+    margin-right: -21px;
+}
+.attach {
+    margin-top: 20px;
+}
+.attach li {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    overflow: hidden;
+    width: 285px;
+    height: 285px;
+}
+img {
+    border: 0 none;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+.attach .name {
+    position: absolute;
+    left: 0;
+    top: 285px;
+    width: 285px;
+    height: 285px;
+    padding: 100px 0;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 22px;
+    z-index: 10;
+    background: rgba(0,0,0,0.7);
+    transition: all 0.2s  ease 0s;
+}
+.attach li:hover .name{
+    top:0px;
+}
+.attach .name em {
+    padding: 0 5px;
+    font-style: normal;
+}
+.attach .name span {
+    font-size: 12px;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: '';
+    line-height: 0;
+}
+.auto-x h3.title-big a.more {
+    float: right;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0;
+    color: #424a5a;
+    padding-top:25px;
+}
+.title-big span, .title-big li {
+    color: #303030;
+    border-bottom: 2px solid #303030;
+    position: absolute;
+    bottom: -1px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.tempWrap{
+    overflow:hidden;
+    position:relative; 
+    width:1224px
+}
+.tempWrap ul.clearfix{
+    position: relative;
+    width: 1200px;
+    padding: 0px; 
+    margin: 0px;
+    display:flex;
+    flex-wrap: nowrap;
+    animation: change 12s infinite linear;
+
+}
+.tempWrap ul.clearfix li{
+    width: 300px; 
+    margin-right:5px;
+}
+.tempWrap ul.clearfix li a img{ 
+    width:300px;
+     height:197px ;
+}
+
+@keyframes change{/*自己为动画起名字，让别人调用*/
+    0%{
+        left:0;
+    }
+    25%{
+        left:-310px;
+    }
+    50%{
+       left:-600px;
+    }
+    75%{
+       left:-900px;
+    }
+    100%{
+        left:-1500px;
+    }
+
+}
+ .footer {
+    margin-top: 60px;
+    padding: 35px 0 0;
+    text-align: center;
+    border-top: 1px solid #d4d4d4;
+    width: 100%;
+}
+.footer .tra{
+    float: left;
+    text-align: left;
+    margin-right: 93px;
+}
+.Box2{
+    width: 255px;
+}
+.tra .tit {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 微软雅黑;
+    color: rgb(102, 102, 102);
+}
+.footer .Box2 .tit i.icon {
+    background-position: -40px 0;
+}
+.footer .tit i.icon {
+    background: url(http://127.0.0.1:3000/you/common_foot.png) no-repeat;
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+.tra ul {
+    margin-left: 42px;
+}
+.tra ul li {
+    float: left;
+    line-height: 26px;
+    text-align: left;
+    width: 70px;
+    overflow: hidden;
+}
+.footer a {
+    margin: 0 15px 0 0;
+    white-space: nowrap;
+    color: #666;
+    font-size: 12px;
+}
+.Box1 {
+    width: 315px;}
+.Box1 ul li.li {
+    width: 120px;
+}
+.tra ul li {
+    float: left;
+    line-height: 26px;
+    text-align: left;
+    width: 70px;
+    overflow: hidden;
+}
+.tra .ul {
+    margin-left: 42px;
+    color: #666;
+}
+.ybox {
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+    background: #e99605;
+    color: #fff;
+    margin-top: 30px;
+}
+.ybox ul li {
+    float: left;
+    text-align: left;
+    width: 200px;
+    padding-right: 40px;
+}
+.ybox ul li h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.ybox ul li p {
+    line-height: 22px;
+    font-family: 宋体;
+    padding-right: 10px;
+    border-right: 1px solid rgb(240, 186, 121);
+    font-size: 12px;
+}
+.cyItem {
+    margin-right: -30px;
+}
+.cyItem li {
+    width: 190px;
+    padding: 9px 11px 1px 25px;
+    margin: 17px 16px 10px 0;
+}
+.cyItem li {
+    float: left;
+    width: 220px;
+    border: 1px solid #e5e5e5;
+    text-align: left;
+    
+}
+
+.footer .cyItem li a {
+    margin: 0;
+}
+.footer a {
+    margin: 0 15px 0 0;
+    white-space: nowrap;
+    color: #666;
+}
+.cyItem li i {
+    display: block;
+    float: left;
+    background: url(http://127.0.0.1:3000/you/common_foot2.png) no-repeat;
+   
+}
+.cyItem li i.icon1 {
+    
+    background-position: 0 -47px;
+    width: 53px;
+    height: 52px;
+}
+ .cyItem li p {
+    margin-left: 20px;
+    line-height: 24px;
+}
+
+.cyItem li p {
+    float: left;
+    margin-top: 4px;
+    color: #666;
+}
+.cyItem li i.icon2 {
+    background-position: -59px -47px;
+    width: 59px;
+    height: 52px;
+}
+ .cyItem li i.icon3 {
+    background-position: -123px -47px;
+    width: 53px;
+    height: 52px;
+}
+ .cyItem li i.icon4 {
+    background-position: -183px -47px;
+    width: 53px;
+    height: 52px;
+}
+ .cyItem li i.icon5 {
+    background-position: -241px -47px;
+    width: 53px;
+    height: 52px;
+}
+.ul p{
+    margin-bottom:0px;
+    font-size:12px;
+}

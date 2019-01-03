@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title></title>
+   <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        #warp{
+            height:500px;
+            margin:10px auto;
+            overflow:hidden;
+            position:relative;
+        }
+        #warp .div_img_b img{
+            height:500px;
+            float:left;
+            display:none;
+            width:100%;
+        }
+        #warp .div_img_b>img.on{
+            display:block;
+        }
+        #warp .div_span_s{
+            height:30px;
+            width:150px;
+            position:absolute;;
+            bottom:10px;
+            margin:10px;
+            left:45%;
+        }
+        #warp .div_span_s>span{
+            height:25px;
+            width:25px;
+            background:white;
+            border-radius:50%;
+            float:left;
+            cursor:pointer;
+            margin-left:10px;
+
+        }
+        #warp .div_span_s>span.on{
+            background:red;
+        }
+        #warp .click_btn{
+            color:red;
+            position:absolute;
+            top:43%;
+            background:white;
+            opacity:0.4;
+            height:60px;
+            width:40px;
+            line-height:60px;
+            text-align:center;
+        }
+       #pre{
+           left:20px;
+       }
+       #next{
+           right:20px;
+       }
+
+    </style>
+</head>
+<body>
+<ul id="j_m_users" class="list-unstyled ">
+    <li class="float-left"><img src="img/fc1.jpg" alt=""><a href=""></a></li>
+    <li class="float-left"><img src="img/fc2.jpg" alt=""><a href=""></a></li>
+    <li class="float-left"><img src="img/fc3.jpg" alt=""><a href=""></a></li>
+    <li class="float-left"><img src="img/fc4.jpg" alt=""><a href=""></a></li>
+    <li class="float-left"><img src="img/fc5.jpg" alt=""><a href=""></a></li>
+    <li class="float-left"><img src="img/fc6.jpg" alt=""><a href=""></a></li>
+    <li class="float-left"><img src="img/fc7.jpg" alt=""><a href=""></a></li>
+    <li class="float-left"><img src="img/fc8.jpg" alt=""><a href=""></a></li>
+
+</ul>
+var $ul=$("<ul id='j_m_users' class='list-unstyled '>"+
+    "<li class='float-left'><img src='img/fc1.jpg' alt=''><a href=''></a></li>"+
+    "<li class='float-left'><img src='img/fc2.jpg' alt=''><a href=''></a></li>"+
+    "<li class='float-left'><img src='img/fc3.jpg' alt=''><a href=''></a></li>"+
+    "<li class='float-left'><img src='img/fc4.jpg' alt=''><a href=''></a></li>"+
+    "<li class='float-left'><img src='img/fc5.jpg' alt=''><a href=''></a></li>"+
+    "<li class='float-left'><img src='img/fc6.jpg' alt=''><a href=''></a></li>"+
+    "<li class='float-left'><img src='img/fc7.jpg' alt=''><a href=''></a></li>"+
+    "<li class='float-left'><img src='img/fc8.jpg' alt=''><a href=''></a></li>"+ "</ul>")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="warp" class=" w-100">
+        <div class="div_img_b w-100 text-center">
+            <img src="img/banner1.png" class="w-100 " alt=""/>
+            <img src="img/banner2.png" class="w-100 " alt=""/>
+            <img src="img/banner3.png" class="w-100 on" alt=""/>
+        </div>
+        <div class="div_span_s">
+            <span class="on"></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a href="#"  class="click_btn" id="pre"><img src="img/supply_left.png" alt=""/></a>
+        <a href="#"  class="click_btn" id="next"><img src="img/supply_right.png" alt=""/></a>
+    </div>
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+
+    var wrapper = document.getElementById("wrap");
+    var div_img_b = document.querySelectorAll(".div_img_b img");
+    var div_span_s = document.querySelectorAll(".div_span_s span");
+    var div_span_sLength = document.querySelectorAll(".div_span_s span").length;
+    var index = 0;
+    var timer;
+
+    //点击图标显示对应图片
+    for (var i = 0; i < div_span_s.length; i++) {
+        div_span_s[i].r = i;
+        div_span_s[i].onclick = function(){
+            for(var j = 0; j < div_span_s.length; j++){
+                div_span_s[j].className = "";
+                div_img_b[j].className = "";
+            }
+            this.className = "on";
+            div_img_b[this.r].className = "on";
+
+//关联索引
+            index = this.r;
+        }
+
+    }
+
+    //点击显示下张图
+    document.getElementById("next").onclick = function(){
+        index ++;
+        if(index >= div_span_sLength){
+            index = 0;
+        }
+        common();
+    }
+
+    //点击显示上张图
+    document.getElementById("pre").onclick = function(){
+        index --;
+        if(index < 0){
+            index = div_span_sLength-1;
+        }
+        common();
+    }
+
+    //自动轮播
+    timer = setInterval("setIntervalTimer()",3000);
+
+    //鼠标移上去停止自动轮播
+    wrapper.onmouseover = function(){
+        clearInterval(timer);
+        document.getElementById("next").style.display="block";
+        document.getElementById("pre").style.display="block";
+    }
+
+    //鼠标移离开开始自动轮播
+    wrapper.onmouseleave = function(){
+        timer = setInterval("setIntervalTimer()",3000);
+        document.getElementById("next").style.display="none";
+        document.getElementById("pre").style.display="none";
+    }
+
+    //自动轮播方法
+    function setIntervalTimer(){
+        index ++;
+        if(index >= div_span_sLength){
+            index = 0;
+        }
+        common();
+    }
+
+    //common
+    function common(){
+        for(var j = 0; j < div_span_s.length; j++){
+            div_span_s[j].className = "";
+            div_img_b[j].className = "";
+        }
+        div_span_s[index].className = "on";
+        div_img_b[index].className = "on";
+    }
+
+    //页面加载完执行
+    window.onload = function(){
+        document.getElementById("next").style.display="none";
+        document.getElementById("pre").style.display="none";
+    }
+</script>
+
+</html>

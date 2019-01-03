@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>js轮播</title>
+    <style>
+    *{padding: 0;margin: 0;}
+    #wrap{width: 100%;height:500px;margin: 10px auto;overflow: hidden;position: relative;}
+    #wrap .div_img_b img{width: 100%;height:500px;float: left;display: none;}
+    #wrap .div_img_b img.on{display: block;}
+    
+    #wrap .div_span_s{height: 30px;position: absolute;bottom: 10px;margin: 10px;left: 45%;}
+    #wrap .div_span_s span{width: 20px;height: 20px;background: #fff;border-radius: 50%;float:left;display: inline-block;margin-right: 10px;cursor: pointer;}
+        #wrap .div_span_s span.on{background: red;}
+        
+        #wrap .click_btn{color: red;position: absolute;top: 43%;background: #FFFFFF;opacity: 0.4;height: 60px;width: 40px;line-height: 60px;text-align: center;}
+        #pre{left: 0;}
+        #next{right: 0;}
+    </style>
+</head>
+
+
+<body>
+<div id="wrap">
+<div class="div_img_b">
+<img class="on" src="img/banner1.png" />
+<img src="img/banner2.png"/>
+<img src="img/banner3.png" />
+</div>
+<div class="div_span_s">
+<span class="on"></span>
+<span></span>
+<span></span>
+</div>
+<a href="#" class="click_btn" id="pre"><</a>
+<a href="#" class="click_btn" id="next">></a>
+</div>
+
+
+</body>
+
+<script>
+var wrapper = document.getElementById("warp");
+var div_img_b = document.querySelectorAll(".div_img_b img");
+var div_span_s = document.querySelectorAll(".div_span_s span");
+var div_span_sLength = document.querySelectorAll(".div_span_s span").length;
+var index = 0;
+var timer;
+
+//点击图标显示对应图片
+for (var i = 0; i < div_span_s.length; i++) {
+div_span_s[i].r = i;
+div_span_s[i].onclick = function(){
+for(var j = 0; j < div_span_s.length; j++){
+div_span_s[j].className = "";
+div_img_b[j].className = "";
+}
+this.className = "on";
+div_img_b[this.r].className = "on";
+ 
+//关联索引
+index = this.r;
+}
+ 
+}
+
+//点击显示下张图
+document.getElementById("next").onclick = function(){
+index ++;
+if(index >= div_span_sLength){
+index = 0;
+}
+common();
+}
+
+//点击显示上张图
+document.getElementById("pre").onclick = function(){
+index --;
+if(index < 0){
+index = div_span_sLength-1;
+}
+common();
+}
+
+//自动轮播
+timer = setInterval("setIntervalTimer()",1000);
+
+//鼠标移上去停止自动轮播
+wrapper.onmouseover = function(){
+   clearInterval(timer);
+   document.getElementById("next").style.display="block";
+   document.getElementById("pre").style.display="block";
+}
+
+//鼠标移离开开始自动轮播
+wrapper.onmouseleave = function(){
+  timer = setInterval("setIntervalTimer()",1000);
+  document.getElementById("next").style.display="none";
+  document.getElementById("pre").style.display="none";
+}  
+
+//自动轮播方法
+function setIntervalTimer(){
+index ++;
+if(index >= div_span_sLength){
+index = 0;
+}
+common();
+}
+
+//common
+function common(){
+for(var j = 0; j < div_span_s.length; j++){
+div_span_s[j].className = "";
+div_img_b[j].className = "";
+}
+div_span_s[index].className = "on";
+div_img_b[index].className = "on";
+}
+
+//页面加载完执行
+window.onload = function(){
+document.getElementById("next").style.display="none";
+    document.getElementById("pre").style.display="none";
+}
+</script>
+
+
+</html>

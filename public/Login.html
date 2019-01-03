@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/register.css"/>
+    <link rel="stylesheet" href="css/login.css"/>
+    <title></title>
+</head>
+<body>
+    <header class="header1 w-100 bg-dark p-2">
+        <a href="" class="w-100"><img src="img/header.png"></a>
+    </header>
+    <section class="w-100">
+        <div class="login-body p-4">
+            <div class="d1 pt-1 pb-4 text-center">
+                <a class="">游侠客账号登录</a>
+            </div>
+            <form action="/youxia/login" method="post">
+                <input type="text" name="uname" class=" w-100 p-2 mb-3 mt-2 " pattern="^\w{1,10}$"  placeholder="用户名"/>
+                <div class="vali_info">*10个字符以内的字母、数字或下划线的组合</div>
+                <input type="password" name="pwd" class="w-100 p-2 mt-4 mb-3"pattern="^\d{6}$" placeholder="密码"/>
+                <div class="vali_info">*6位数字</div>
+                <input type="button" value="登录" class="w-100 btn-warning p-2 input3 mt-3" />
+            </form>
+            <div class="pt-3 d3">
+                <span class="">还没有账号？</span>
+                <a href="register.html" class=""> 去注册</a>
+                <a href=""class="">忘记密码?</a>
+            </div>
+        </div>
+    </section>
+    <div class="row pt-3">
+        <div class="col-3 offset-1">
+            <p ><h2>爱旅游</h2></p>
+            <p><h4>爱摄影</h4></p>
+            <p><h2>你就是游侠客</h2></p>
+        </div>
+        <div class="col-4 ">
+            <ul class="list-unstyled ">
+                <li><h2>你知道吗</h2></li>
+                <li>游侠客是旅行者的社交网络</li>
+                <li>游侠客的线路都是精心策划的</li>
+                <li>加入游侠客多参加户外运动</li>
+                <li>你可能会增加5年寿命,多交18个旅伴</li>
+            </ul>
+        </div>
+        <div class="col-4 ">
+            <ul class="list-unstyled ">
+                <li><h2>加入游侠客</h2></li>
+                <li>结识各种旅游狂人、户外大侠、摄影专家、自驾高手</li>
+                <li>与朋友、同学、同事、家人保持密切的联络</li>
+                <li>结伴出游，参加各种精彩的活动</li>
+                <li>分享精彩的旅途生活、照片、游记</li>
+            </ul>
+        </div>
+    </div>
+    <footer class="footer1 pt-4">
+        <p class="mt-2">ICP经营许可证：<a href="">浙ICP备09011512-1号</a><b>|</b>
+            <a href="">营业执照</a><b>|</b>&nbsp;&nbsp;&nbsp;浙江游侠客国际旅行社有限公司&nbsp;&nbsp;&nbsp;杭州途游电子商务有限公司</p>
+        <p class="pt-1" ><span>© 2018 youxiake.com 版权所有</span><span>法律顾问：浙江四海方圆律师事务所&nbsp;&nbsp;&nbsp;傅林放</span></p>
+        <img src="img/iccc.jpg" alt=""/>
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

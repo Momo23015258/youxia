@@ -1,0 +1,70 @@
+<header>
+    <div class="w-100 bg-dark">
+        <div class="header-top row bg-dark p-2">
+            <div class="col-4 pl-3 offset-1">
+                <a class="pr-2" href="Login.html" >登录 </a>
+                <a class="pl-1" href="register.html">注册</a>
+            </div>
+            <div class="col-6 pr-5" >
+                <ul class=" list-unstyled bg-dark">
+                    <li class="float-right pl-3"><a href="">手机APP</a></li>
+                    <li class="float-right pl-3"><a href="">我的游侠客</a></li>
+                    <li class="float-right pl-3"><a href="">帮助中心</a></li>
+                    <li class="float-right pl-3"><a href="">我的订单</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row header-body p-4 bg-dark">
+            <div class="row-4 pl-5"><img src="img/new_logo.png" alt=""/></div>
+            <div class="select row-1">
+                <span>杭州站</span>
+                <div class=" bg-light">
+                    <ul class="list-unstyled w-100">
+                        <li ><a class="pb-1 pl-3 pr-3" href="">杭州</a></li>
+                        <li ><a class="pb-1 pl-3 pr-3" href="">上海</a></li>
+                        <li ><a class="pb-1 pl-3 pr-3" href="">成都</a></li>
+                        <li ><a class="pb-1 pl-3 pr-3" href="">北京</a></li>
+                        <li ><a class="pb-1 pl-3 pr-3" href="">武汉</a></li>
+                        <li ><a class="pb-1 pl-3 pr-3" href="">苏州</a></li>
+                        <li ><a class="pb-1 pl-3 pr-3" href="">南京</a></li>
+                        <li ><a class="pb-1 pl-3 pr-3" href="">重庆</a></li>
+                        <li ><a class="pb-1 pl-3 pr-3" href="">深圳</a></li>
+                        <li ><a class="pb-1 pl-3 pr-3" href="">广州</a></li>
+                        <li ><a class="pb-1 pl-3 pr-3" href="">云南</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row-5 w-50 text-center pt-2">
+                <div class="float-right w-75 bg-warning text-left">
+                    <input type="search" class="w-75 bg-dark p-2 "/>
+                    <span class="pl-5">搜索</span>
+                </div>
+            </div>
+            <div class="row-2 pl-5 pt-1"><img src="img/phone.png" alt=""/></div>
+        </div>
+        <div class="header-bottom bg-dark p-3 w-100">
+            <ul class="list-unstyled">
+                <li class="float-left pr-5"><a href="">首页</a></li>
+                <li class="float-left pr-5"><a href="">摄影游</a></li>
+                <li class="float-left pr-5"><a href="">主题游</a></li>
+                <li class="float-left pr-5"><a href="">定制游</a></li>
+                <li class="float-left pr-5"><a href="">活动赛事</a></li>
+                <li class="float-left pr-5"><a href="outbound.html">出境游</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+
+        $("header").on("load",function(){
+            $(".select>.bg-light").hide();
+        })
+        $(".select").on("mouseover",function(){
+            $(".select>.bg-light").show();
+        })
+        console.log($(".select"));
+        console.log( $(".select>.bg-light"));
+        $(".select").on("mouseout",function(){
+            $(".select>.bg-light").hide();
+        })
+    </script>
+</header>

@@ -1,0 +1,95 @@
+*{margin:0px; padding:0px}
+section{
+    height:548px;
+    background-image:url("../img/77.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-repeat:no-repeat;
+    position: relative;
+}
+.login-body{
+    height:432px;
+    width:356px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top:40px;
+    left:850px;
+}
+.login-body:before{
+    content: "";
+    display: table;
+}
+div.d1 a{
+    font-size: 16px;
+}
+div.d1 a:nth-child(1){
+     color:#f49402;
+    font-size:25px;
+    font-weight: 900;
+ }
+div.d1 a:nth-child(3){
+    color:#fff;
+}
+div.d1 b{
+    color:#fff;
+}
+div.d1 a:nth-child(1):hover{
+    color:#f49402;
+}
+section .login-body a:hover{
+    text-decoration: none;
+    cursor:pointer;
+}
+form input{
+    font-size:12px;
+}
+form input.input3{
+    font-size:15px;
+    color:#fff;
+}
+div.d3{
+    position: relative;
+}
+div.d3 span{
+    font-size:14px;
+    color:#fff;
+}
+div.d3 a:nth-child(2){
+    font-size:14px;
+    color:#f49402;
+}
+div.d3 a:nth-child(3){
+  position: absolute;
+    top:21px;
+   left:240px;
+    color:#fff;
+    font-size:12px;
+    font-family: "Î¢ÈíÑÅºÚ";
+}
+div.d3 a:nth-child(3):hover{
+    color:#fff;
+}
+div.d4 p{
+    color:#aaaaaa;
+    font-size:13px;
+}
+.vali_info{
+   display:none;
+    color:#fff;
+}
+
+.vali_fail{
+    background-image:url("../img/err.png");
+    border:1px solid red;
+    background-color:#ddd;
+    color:Red;
+    padding-left:30px;
+    background-repeat:no-repeat;
+}
+.vali_success{
+    background-image:url("../img/ok.png");
+    padding-left:20px;
+    width:0px;height:20px;
+    overflow:hidden;
+    background-repeat:no-repeat;
+}
